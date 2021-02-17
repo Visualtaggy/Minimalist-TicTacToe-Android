@@ -11,6 +11,7 @@
         android:id="@+id/imageView"
         android:layout_width="370dp"
         android:layout_height="414dp"
+        android:contentDescription="@string/bd_des"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,15 +38,19 @@
             android:layout_height="100dp"
             android:layout_margin="10dp"
             android:layout_marginTop="20dp"
-            app:srcCompat="@drawable/cross" />
+            android:contentDescription="@string/pz_des"
+            android:onClick="fadeIn" />
 
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            app:srcCompat="@drawable/cross" />
+            android:contentDescription="@string/pz_des"
+            android:onClick="fadeIn" />
 
         <ImageView
             android:id="@+id/imageView4"
@@ -53,43 +58,63 @@
             android:layout_height="100dp"
             android:layout_margin="10dp"
             android:layout_marginTop="20dp"
-            app:srcCompat="@drawable/cross" />
+            android:contentDescription="@string/pz_des"
+            android:onClick="fadeIn" />
 
         <ImageView
             android:id="@+id/imageView5"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            app:srcCompat="@drawable/cross" />
+            android:layout_margin="10dp"
+            android:contentDescription="@string/pz_des"
+            android:onClick="fadeIn" />
 
         <ImageView
             android:id="@+id/imageView6"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            app:srcCompat="@drawable/cross" />
+            android:layout_margin="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:contentDescription="@string/pz_des"
+            android:onClick="fadeIn" />
 
         <ImageView
             android:id="@+id/imageView7"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            app:srcCompat="@drawable/cross" />
+            android:layout_margin="10dp"
+            android:contentDescription="@string/pz_des"
+            android:onClick="fadeIn" />
 
         <ImageView
             android:id="@+id/imageView8"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            app:srcCompat="@drawable/cross" />
+            android:layout_margin="10dp"
+            android:layout_marginTop="15dp"
+            android:contentDescription="@string/pz_des"
+            android:onClick="fadeIn" />
 
         <ImageView
             android:id="@+id/imageView9"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            app:srcCompat="@drawable/cross" />
+            android:layout_margin="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:contentDescription="@string/pz_des"
+            android:onClick="fadeIn" />
 
         <ImageView
             android:id="@+id/imageView10"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            app:srcCompat="@drawable/cross" />
+            android:layout_margin="10dp"
+            android:layout_marginTop="15dp"
+            android:contentDescription="@string/pz_des"
+            android:onClick="fadeIn" />
     </androidx.gridlayout.widget.GridLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
