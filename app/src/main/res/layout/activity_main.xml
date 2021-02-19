@@ -33,7 +33,7 @@
         app:rowCount="3" >
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/a"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
@@ -43,7 +43,7 @@
             android:tag="0" />
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/b"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
@@ -55,7 +55,7 @@
             android:tag="1" />
 
         <ImageView
-            android:id="@+id/imageView4"
+            android:id="@+id/c"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
@@ -65,7 +65,7 @@
             android:tag="2" />
 
         <ImageView
-            android:id="@+id/imageView5"
+            android:id="@+id/d"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
@@ -74,7 +74,7 @@
             android:tag="3" />
 
         <ImageView
-            android:id="@+id/imageView6"
+            android:id="@+id/e"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
@@ -85,7 +85,7 @@
             android:tag="4" />
 
         <ImageView
-            android:id="@+id/imageView7"
+            android:id="@+id/f"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
@@ -94,7 +94,7 @@
             android:tag="5" />
 
         <ImageView
-            android:id="@+id/imageView8"
+            android:id="@+id/g"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
@@ -104,7 +104,7 @@
             android:tag="6" />
 
         <ImageView
-            android:id="@+id/imageView9"
+            android:id="@+id/h"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
@@ -116,7 +116,7 @@
             android:tag="7" />
 
         <ImageView
-            android:id="@+id/imageView10"
+            android:id="@+id/i"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_margin="10dp"
