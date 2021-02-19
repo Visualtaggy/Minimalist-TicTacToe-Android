@@ -26,11 +26,12 @@ public class MainActivity extends AppCompatActivity {
 
     //Game Status
     boolean gameRunning = true;
+    int drawCounter = 0;
 
         public void fadeIn (View view){
         ImageView circle_cross = (ImageView) view;
-        ImageView result = (ImageView) findViewById(R.id.result_screen);
-        ImageView p_again = (ImageView) findViewById(R.id.try_again);
+        ImageView result = findViewById(R.id.result_screen);
+        ImageView p_again = findViewById(R.id.try_again);
 
         int index = Integer.parseInt(circle_cross.getTag().toString());
 
@@ -44,9 +45,11 @@ public class MainActivity extends AppCompatActivity {
             if (currentPlayer == 0) {
                 circle_cross.setImageResource(R.drawable.circle);
                 currentPlayer = 1;
+                drawCounter++;
             } else {
                 circle_cross.setImageResource(R.drawable.cross);
                 currentPlayer = 0;
+                drawCounter++;
             }
 
             // Drops X or O down
@@ -66,10 +69,15 @@ public class MainActivity extends AppCompatActivity {
                     gameRunning = false;
                     p_again.setVisibility(View.VISIBLE);
                     p_again.setImageResource(R.drawable.play_again);
-
                 }
             }
         }
+        // Checking if the game ended in a draw
+            if(drawCounter == 9){
+                result.setImageResource(R.drawable.draw);
+                p_again.setVisibility(View.VISIBLE);
+                p_again.setImageResource(R.drawable.play_again);
+            }
     }
 
         public void playAgain(View view){
