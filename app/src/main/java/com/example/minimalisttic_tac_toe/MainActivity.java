@@ -8,22 +8,35 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
-    int counter = 0;
+
+    // 0: circle, 1: cross
+    int currentPlayer = 0;
+    //2: blank
+    int[] gameState = {2,2,2,2,2,2,2,2,2};
+
 
     public void fadeIn(View view){
-        //increasing counter to keep a track of the game
-        counter++;
-        if(counter % 2 == 0){
-            ImageView circle = (ImageView) view;
-            circle.setImageResource(R.drawable.circle);
+        ImageView circle_cross = (ImageView) view;
 
+        int index = Integer.parseInt(circle_cross.getTag().toString());
+        gameState[index] = currentPlayer;
 
+        //Using counter to track turns b/w p1 and p2
+        if(currentPlayer == 0){
+            //Adding Animations
+            circle_cross.setTranslationY(-1500);
+            //setting image resource
+            circle_cross.setImageResource(R.drawable.circle);
+            circle_cross.animate().translationYBy(1500).setDuration(300);
+            //Giving next player chance to play
+            currentPlayer = 1;
         }
         else {
-            ImageView cross = (ImageView) view;
-            cross.setImageResource(R.drawable.cross);
+            circle_cross.setTranslationY(-1500);
+            circle_cross.setImageResource(R.drawable.cross);
+            circle_cross.animate().translationYBy(1500).setDuration(300);
+            currentPlayer = 0;
         }
-
 
     }
 
