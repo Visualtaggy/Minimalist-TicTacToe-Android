@@ -2,4 +2,6 @@
     <string name="app_name">Minimalist Tic-Tac-Toe</string>
     <string name="bd_des">This is the main board of the game where it takes place</string>
     <string name="pz_des">This is where the player plays his/her move</string>
+    <string name="result_des">Shows the results of the game</string>
+    <string name="pg">Allows the player to start the game again</string>
 </resources>

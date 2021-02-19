@@ -124,6 +124,30 @@
             android:contentDescription="@string/pz_des"
             android:onClick="fadeIn"
             android:tag="8" />
+
     </androidx.gridlayout.widget.GridLayout>
+
+    <ImageView
+        android:id="@+id/result_screen"
+        android:layout_width="286dp"
+        android:layout_height="118dp"
+        android:layout_marginTop="60dp"
+        android:contentDescription="@string/result_des"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.36"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/try_again"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/pg"
+        android:onClick="playAgain"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

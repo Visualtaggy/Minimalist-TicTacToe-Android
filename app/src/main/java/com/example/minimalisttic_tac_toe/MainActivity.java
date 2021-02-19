@@ -2,12 +2,15 @@ package com.example.minimalisttic_tac_toe;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.GridLayout;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
-
-import java.util.*;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -26,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
 
         public void fadeIn (View view){
         ImageView circle_cross = (ImageView) view;
+        ImageView result = (ImageView) findViewById(R.id.result_screen);
+        ImageView p_again = (ImageView) findViewById(R.id.try_again);
+
         int index = Integer.parseInt(circle_cross.getTag().toString());
 
         if (gameState[index] == 2 && gameRunning) {
@@ -50,19 +56,31 @@ public class MainActivity extends AppCompatActivity {
             for (int[] winningPosition : winPossibilities) {
 
                 if (gameState[winningPosition[0]] == gameState[winningPosition[1]] && gameState[winningPosition[1]] == gameState[winningPosition[2]] && gameState[winningPosition[0]] != 2) {
-                    String winner;
+
                     if (currentPlayer == 0) {
-                        winner = "X";
+
+                        result.setImageResource(R.drawable.x_won);
                     } else {
-                        winner = "O";
+                        result.setImageResource(R.drawable.o_won);
                     }
                     gameRunning = false;
-                    Toast.makeText(this, winner + " WON the game!", Toast.LENGTH_SHORT).show();
+                    p_again.setVisibility(View.VISIBLE);
+                    p_again.setImageResource(R.drawable.play_again);
+
                 }
             }
         }
     }
 
+        public void playAgain(View view){
+            //Restarting Activity to play again
+            Intent intent = getIntent();
+            overridePendingTransition(0, 0);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            finish();
+            overridePendingTransition(0, 0);
+            startActivity(intent);
+        }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
